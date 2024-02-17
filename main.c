@@ -150,7 +150,10 @@ void fourYearCycle(long* data, double* mortData, int ch){
 	data[0] = newBorn;
 	/*printData (data, M_SIZE);*/
 	for (int n=0; n<M_SIZE; n++){
-		data[n] = data[n] * (1- 4*(mortData[n])/100);
+		data[n] = data[n] * (1- (mortData[n])/100);
+		data[n] = data[n] * (1- (mortData[n])/100);
+		data[n] = data[n] * (1- (mortData[n])/100);
+		data[n] = data[n] * (1- (mortData[n])/100);
 		if (data[n]<0)
 			data[n] = 0;
 	}
